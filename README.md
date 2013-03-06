@@ -62,31 +62,24 @@ Click "Create another client ID..." and follow the directions from the previous 
 Prerequisites: install Eclipse, the Mercurial plugin (optional), and the Android plugin.
 
 Preferences:
-1. Android: setup SDK location
+
++ Android: setup SDK location
 Window > Android SDK Manager
-
 Check on "Google APIs" under "Android 4.1.6 (API Level 16)"
-
 Check on "Google Play services" under "Extras".
-
 Click on "Install X packages..."
 
-2. Import tasks-android-sample project
++ Import YoutubeUploadV3 project
 
 File > Import...
-
 Select "General > Existing Project into Workspace" and click "Next"
-
 Click "Browse" next to "Select root directory", find [someDirectory]/YoutubeUploadAndroidSampleV3/YoutubeUploadV3 and click "Next"
-
 Click "Finish"
 
-3. Clean Project (if compile error about missing gen directory)
++ Clean Project (if compile error about missing gen directory)
 
 Select YoutubeUploadV3 project
-
 Project > Clean...
-
 Select "Clean projects selected below"
 
 Click on "OK"
@@ -94,9 +87,6 @@ Click on "OK"
 NOTE: you must use a physical device for developing and testing because Google Play services cannot be installed on an emulator.
 
 Run
-
-Right-click on project tasks-android-sample
-
+Right-click on project YoutubeUploadV3
 Run As > Android Application
-
 Select the physical device and click OK.
