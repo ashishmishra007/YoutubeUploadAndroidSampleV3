@@ -26,3 +26,25 @@ https://developers.google.com/youtube/v3/getting-started
 
 YouTube Data API Documentation / Version 3.0 / Videos: insert
 https://developers.google.com/youtube/v3/docs/videos/insert?hl=ko
+
+
+Register Your Application
+
+You first need to register your Android application and sign up for access to the Google YouTube Data API V3 in the Google APIs Console. First, you need the "Signing certificate fingerprint (SHA1)" for the debug build:
+
+keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | openssl sha1
+Enter keystore password: android
+And for the release build:
+
+keytool -exportcert -alias androiddebugkey -keystore my-release-key.keystore | openssl sha1
+Next, register in the Google APIs Console:
+
+Visit the Google apis console
+If this is your first time, click "Create project..." Otherwise, click on the drop down under the "Google apis" logo at the top left, and click "Create..." under "Other projects"
+Click on "Services", and change the YouTube Data API V3 status to "ON".
+Click on "API Access", and then on "Create an OAuth 2.0 Client ID...".
+Enter a product name and click "Next".
+Select "Installed application", select "Android", enter com.example.youtubeuploadv3 for "Package name".
+Note: The package name must be universally unique to actually register an application. If you try to register a package name in use, you may get an error reading "An unexpected error has occurred." This sample has already been registered, so you will need to change the package name.
+Paste the SHA1 fingerprint for the debug certificate above into "Signing certificate fingerprint (SHA1)", and click "Create client ID".
+Click "Create another client ID..." and follow the directions from the previous steps, but use the release certificate instead of the debug certificate.
