@@ -48,3 +48,30 @@ Select "Installed application", select "Android", enter com.example.youtubeuploa
 Note: The package name must be universally unique to actually register an application. If you try to register a package name in use, you may get an error reading "An unexpected error has occurred." This sample has already been registered, so you will need to change the package name.
 Paste the SHA1 fingerprint for the debug certificate above into "Signing certificate fingerprint (SHA1)", and click "Create client ID".
 Click "Create another client ID..." and follow the directions from the previous steps, but use the release certificate instead of the debug certificate.
+
+
+Setup Project in Eclipse
+
+Prerequisites: install Eclipse, the Mercurial plugin (optional), and the Android plugin.
+
+Preferences:
+Android: setup SDK location
+Window > Android SDK Manager
+Check on "Google APIs" under "Android 4.1.6 (API Level 16)"
+Check on "Google Play services" under "Extras".
+Click on "Install X packages..."
+Import tasks-android-sample project
+File > Import...
+Select "General > Existing Project into Workspace" and click "Next"
+Click "Browse" next to "Select root directory", find [someDirectory]/YoutubeUploadAndroidSampleV3/YoutubeUploadV3 and click "Next"
+Click "Finish"
+Clean Project (if compile error about missing gen directory)
+Select YoutubeUploadV3 project
+Project > Clean...
+Select "Clean projects selected below"
+Click on "OK"
+NOTE: you must use a physical device for developing and testing because Google Play services cannot be installed on an emulator.
+Run
+Right-click on project tasks-android-sample
+Run As > Android Application
+Select the physical device and click OK.
